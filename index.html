@@ -49,31 +49,42 @@ body {
 	</div>
 
 	<div id="right">
-		And some more text here... 
+		<h3 id="text2">And some more text here... </h3>
 		<img src="http://3.bp.blogspot.com/-DwUTo6YzQw4/UYUVCIsOH8I/AAAAAAAABMI/Dq5UnqIDUPY/s1600/24.+Corgi+Puppies.jpg">
 	</div>
 	 
 <script  type="text/javascript">
-	console.log("goodbye" + "hello");
-	var textElem = document.getElementById("left"); 
-	var hammertime = new Hammer(textElem);
+
 	var pinchDiff = 0.1;
+	
+	var pinchinFunc = function(ev, elem) {
+			var fontsize = parseFloat(window.getComputedStyle(elem).getPropertyValue('font-size')); 
 
-	hammertime.get('pinch').set({ enable: true });
-	hammertime.on('pinchin', 
-		function(ev) {
-			var fontsize = parseFloat(window.getComputedStyle(textElem).getPropertyValue('font-size')); 
+			if (ev.additionalEvent == "pinchin") {
+				elem.style.fontSize = fontsize - pinchDiff + "px"; 
+			} else if (ev.additionalEvent == "pinchout") {
+				elem.style.fontSize = fontsize + pinchDiff + "px"; 
+			}
 
-			textElem.style.fontSize = fontsize - pinchDiff + "px"; 
-			console.log(textElem.style.fontSize); 
-	}); 
-	hammertime.on('pinchout', 
-		function(ev) {
-			var fontsize = parseFloat(window.getComputedStyle(textElem).getPropertyValue('font-size')); 
+			
+	}; 
 
-			textElem.style.fontSize = fontsize + pinchDiff + "px"; 
-			console.log(textElem.style.fontSize); 
-	}); 
+
+	var bodyText = document.getElementById("left"); 
+	var leftHammer = new Hammer(bodyText);
+	leftHammer.get('pinch').set({ enable: true });
+	leftHammer.on('pinch', function(ev) {
+		pinchinFunc(ev, bodyText); 
+	});
+
+	var headerText = document.getElementById("text2"); 
+	var rightTextHammer = new Hammer(headerText); 
+	rightTextHammer.get('pinch').set({enable: true}); 
+	rightTextHammer.on('pinch', function(ev) {
+		pinchinFunc(ev, headerText); 
+	})
+
+
 </script>
 
 </body>
