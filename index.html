@@ -35,7 +35,15 @@ body {
 <body>
 
 <script src="hammer-time.min.js">
-console.log('hello world'); 
+console.log('hello world'); woeifjweifj
+var textElem = document.getElementById('left'); 
+var hammertime = new Hammer(textElem);
+
+hammertime.get('pinch').set({ enable: true });
+hammertime.on('pinch', function(ev) {
+	console.log(ev);
+	textElem.style.fontSize = textElem.style.fontSize + .5; 
+});
 
 </script>
 
