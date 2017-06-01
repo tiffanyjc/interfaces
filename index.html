@@ -3,12 +3,14 @@
 <style>
 
 body {
-	font: 10px Verdana;
+	/*font: 10px Verdana;*/
 }
 
 #left {
 	position: absolute; 
 	margin-top: 100px;
+	font: 10px Verdana;
+	font-size: 10px;
 	top: 0px;
 	left: 10%; 
 	width: 30%; 
@@ -34,17 +36,7 @@ body {
 
 <body>
 
-<script src="hammer-time.min.js">
-console.log('hello world'); woeifjweifj
-var textElem = document.getElementById('left'); 
-var hammertime = new Hammer(textElem);
-
-hammertime.get('pinch').set({ enable: true });
-hammertime.on('pinch', function(ev) {
-	console.log(ev);
-	textElem.style.fontSize = textElem.style.fontSize + .5; 
-});
-
+<script src="hammer.min.js"  type="text/javascript">
 </script>
 
 	<div id="left"> 
@@ -61,5 +53,28 @@ hammertime.on('pinch', function(ev) {
 		<img src="http://3.bp.blogspot.com/-DwUTo6YzQw4/UYUVCIsOH8I/AAAAAAAABMI/Dq5UnqIDUPY/s1600/24.+Corgi+Puppies.jpg">
 	</div>
 	 
+<script  type="text/javascript">
+	console.log("goodbye" + "hello");
+	var textElem = document.getElementById("left"); 
+	var hammertime = new Hammer(textElem);
+	var pinchDiff = 0.1;
+
+	hammertime.get('pinch').set({ enable: true });
+	hammertime.on('pinchin', 
+		function(ev) {
+			var fontsize = parseFloat(window.getComputedStyle(textElem).getPropertyValue('font-size')); 
+
+			textElem.style.fontSize = fontsize - pinchDiff + "px"; 
+			console.log(textElem.style.fontSize); 
+	}); 
+	hammertime.on('pinchout', 
+		function(ev) {
+			var fontsize = parseFloat(window.getComputedStyle(textElem).getPropertyValue('font-size')); 
+
+			textElem.style.fontSize = fontsize + pinchDiff + "px"; 
+			console.log(textElem.style.fontSize); 
+	}); 
+</script>
+
 </body>
 </html>
