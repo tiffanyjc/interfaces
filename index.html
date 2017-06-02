@@ -3,33 +3,84 @@
 <style>
 
 body {
-	/*font: 10px Verdana;*/
+	background-color: #f2f2ef; 
+	font-family: "Segoe UI"; 
+	display: flex; 
+	flex-direction: column; 
 }
 
-#left {
-	position: absolute; 
-	margin-top: 100px;
-	font: 10px Verdana;
-	font-size: 10px;
-	top: 0px;
-	left: 10%; 
-	width: 40%; 
-	height: 100%; 
+#landing {
+	width: 100%; 
+	text-align: center; 
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	margin: 50px;
 }
 
-#right {
-	position: absolute;
-	margin-top: 100px;  
-	top: 0px;
-	left: 60%; 
-	width: 30%; 
-	height: 100%;
-	font: 30px Verdana; 
+#search {
+	background-color: white; 
+	border: 1px solid #72726e;
+	padding: 8px;
+	width: 800px; 
+	text-align: left;
+	display: flex; 
+	justify-content: space-between;
+
+}
+
+#searchgo {
+	background-color: #2869ed; 
+	height: 200%; 
+	width: 25px;
+	color: white;  
+	vertical-align: center; 
+	text-align: center; 
+	/*width: height;*/
 }
 
 #right img {
 	width: 100%;	
 }
+
+.card {
+	background-color: white; 
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	width: 100%; 
+	margin: 10px; 
+}
+
+.card img {
+	width: 100%;
+	padding-bottom: 0; 
+}
+
+.newscard {
+	border: none; 
+	width: 90%; 
+	left: 5%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#cols {
+	width: 100%; 
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-around;
+}
+
+.col {
+	width: 25%;
+	display: flex; 
+	flex-direction: column;
+	font: 22px Verdana; 
+}
+
+
+
 </style>
 
 
@@ -39,19 +90,209 @@ body {
 <script src="hammer.min.js"  type="text/javascript">
 </script>
 
-	<div id="left"> 
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer diam leo, lobortis vel fermentum et, placerat id ipsum. Morbi rhoncus lectus ac nibh sollicitudin commodo. Pellentesque ultricies nec augue id imperdiet. Pellentesque iaculis dapibus sollicitudin. Mauris iaculis sodales lectus, nec efficitur massa imperdiet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque, nulla non auctor sagittis, sem libero molestie mi, vel elementum lorem ipsum vitae nibh. Nam eget ligula erat. Nulla mauris massa, accumsan sed imperdiet ac, accumsan in nisl. Curabitur semper sed elit a blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam sit amet ligula ullamcorper, vestibulum ipsum id, elementum libero. In et risus eget tortor congue malesuada sit amet ut purus. Sed a dui quis orci ornare mattis. 
-		</p>
-		<p>
-		Ut diam lorem, tempus euismod nisl quis, interdum sollicitudin felis. Etiam tincidunt mi ut est ultrices, sed ornare est auctor. Integer fringilla, purus a dapibus varius, augue elit consectetur libero, eget efficitur dui felis eget nibh. Proin ac ipsum eu diam lacinia mollis molestie in mi. Quisque ac felis elit. Quisque tincidunt at leo eget dapibus. Sed pulvinar nisi lacus, vitae efficitur neque lacinia ullamcorper. Aenean suscipit leo quis sem aliquam ornare. Donec lacinia venenatis iaculis. Sed consequat diam sit amet ante ultricies congue. Quisque mattis dui tellus, eget euismod sapien pellentesque at. Duis lacus ligula, commodo non sollicitudin in, tempor vel libero. Sed in pretium dolor. Nunc viverra, enim non sollicitudin mattis, ante diam facilisis sem, quis lacinia nisl magna id tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed vehicula eros. 
-		</p>
+<div id="landing"> 
+<center>
+<p style="font: 25px Verdana;" id="where">Where to next? </p>
+
+<div id="search"> 
+Search or enter web address
+<div align="right" id="searchgo">
+>
+</div>
+</div>
+
+</center>
+
+</div>
+
+<div id="cols"> 
+<div id="col1" class="col"> 
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
 	</div>
 
-	<div id="right">
-		<h3 id="text2">And some more text here... </h3>
-		<img src="http://3.bp.blogspot.com/-DwUTo6YzQw4/UYUVCIsOH8I/AAAAAAAABMI/Dq5UnqIDUPY/s1600/24.+Corgi+Puppies.jpg">
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
 	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+</div>
+
+<div id="col2" class="col"> 
+
+	
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+
+</div>
+
+<div id="col3" class="col"> 
+
+	
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://i2m.tudocdn.net/img/width660/height440/id240026_1.jpg"> 
+		<div class="newscard"> 
+			Amsterdam and Paris could be connected by Hyperloop by 2021 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://www.wired.com/wp-content/uploads/2016/02/apple-fbi-iphoneRTX1L8LJ.jpg"> 
+		<div class="newscard"> 
+			The story behind the century old barn on Apple's $5bn campus 
+		</div>
+	</div>
+
+	<div class="card"> 
+		<img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/04/16/appletimcook.jpg"> 
+		<div class="newscard"> 
+			Apple users' $100 billion splurge 
+		</div>
+	</div>
+
+</div>
+</div>
+
+<!-- Script stuff down here  -->
+
+
 	 
 <script  type="text/javascript">
 
@@ -70,19 +311,41 @@ body {
 	}; 
 
 
-	var bodyText = document.getElementById("left"); 
-	var leftHammer = new Hammer(bodyText);
-	leftHammer.get('pinch').set({ enable: true });
-	leftHammer.on('pinch', function(ev) {
-		pinchinFunc(ev, bodyText); 
-	});
+	var bodyText = document.getElementById("col1"); 
+	var bodyText2 = document.getElementById("col2"); 
+	var bodyText3 = document.getElementById("col3"); 
+	var whereText = document.getElementById('where'); 
 
-	var headerText = document.getElementById("text2"); 
-	var rightTextHammer = new Hammer(headerText); 
-	rightTextHammer.get('pinch').set({enable: true}); 
-	rightTextHammer.on('pinch', function(ev) {
-		pinchinFunc(ev, headerText); 
+	var hammer1 = new Hammer(bodyText);
+	var hammer2 = new Hammer(bodyText2);
+	var hammer3 = new Hammer(bodyText3);
+	var hammer4 = new Hammer(whereText); 
+
+	hammer1.get('pinch').set({ enable: true });
+	hammer2.get('pinch').set({ enable: true });
+	hammer3.get('pinch').set({ enable: true });
+	hammer4.get('pinch').set({ enable: true }); 
+
+	hammer1.on('pinch', function(ev) {
+		pinchinFunc(ev, bodyText); 
+		pinchinFunc(ev, bodyText2); 
+		pinchinFunc(ev, bodyText3); 
+	});
+	hammer2.on('pinch', function(ev) {
+		pinchinFunc(ev, bodyText); 
+		pinchinFunc(ev, bodyText2); 
+		pinchinFunc(ev, bodyText3); 
+	});
+	hammer3.on('pinch', function(ev) {
+		pinchinFunc(ev, bodyText); 
+		pinchinFunc(ev, bodyText2); 
+		pinchinFunc(ev, bodyText3); 
+	});
+	hammer4.on('pinch', function(ev) {
+		pinchinFunc(ev, whereText); 
 	})
+
+
 
 
 </script>
